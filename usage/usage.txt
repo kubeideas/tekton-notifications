@@ -1,0 +1,37 @@
+## SMTP message required environment variables ##
+SEND_TYPE=SMTP
+
+GIT_REPO
+GIT_BRANCH
+GIT_COMMIT
+PUSHER_NAME
+PUSHER_EMAIL
+PIPELINERUN_NAME
+PIPELINERUN_STATUS
+NAMESPACE
+
+SMTP_SERVER    (Store this in a kubernetes secret)
+SMTP_PORT      (Store this in a kubernetes secret)
+SMTP_USERNAME  (Store this in a kubernetes secret)  
+SMTP_PASSWORD  (Store this in a kubernetes secret)
+SMTP_SUBJECT
+SMTP_FROM
+SMTP_RECIPIENTS
+##################################################
+
+
+## Slack message required environment variables ##
+SEND_TYPE=SLACK
+
+GIT_REPO
+GIT_BRANCH
+GIT_COMMIT
+PUSHER_NAME
+PUSHER_EMAIL
+PIPELINERUN_NAME
+PIPELINERUN_STATUS
+NAMESPACE
+
+HOOK_URL       (Store this in a kubernetes secret)
+
+##################################################
