@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{.PageTitle}}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: #f6f6f6;
+            -webkit-font-smoothing: antialiased;
+            font-size: 14px;
+            line-height: 1.4;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%; 
+        }    
+
+        .success-header{
+            background-color: #DFF0D8 !important;
+            color: #417A42;
+            padding: 20px;
+            font-size: 18px;
+            text-align: left;
+            border: 2px solid #D6E9C6;
+            border-radius: 5px;
+        }
+
+        .failure-header {
+            background-color: #F2DEDE !important;
+            color: #A94442;
+            padding: 20px;
+            font-size: 18px;
+            text-align: left;
+            border: 2px solid #EBCCD1;
+            border-radius: 5px;
+        }   
+
+        .warning-header {
+          background-color: #FCF8E3 !important;
+          color: #8A6D3B;
+          padding: 20px;
+          font-size: 18px;
+          text-align: left;
+          border: 2px solid #FAEED1;
+          border-radius: 5px;          
+        }
+
+        .info-header {
+          background-color: #D9EDF7 !important;
+          color: #5188A3;
+          padding: 20px;
+          font-size: 18px;
+          text-align: left;
+          border: 2px solid #BCE8F1;
+          border-radius: 5px;            
+      }           
+
+        .details-table{
+            width:50%; 
+            margin-left:5%; 
+        }
+
+        .details-message{
+            padding: 20px;
+            font-size: 14px;
+            text-align: left;
+            border: 1px solid #DDDDDD;
+            border-radius: 5px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <table class="details-table">
+        <tr>
+            <td class="{{.HeaderClass}}"> 
+                <strong>{{.HeaderMsg}}</strong>
+            </td>
+        </tr>        
+        <tr>
+            <td class="details-message">
+                <p><strong>Repository:</strong> {{.GitRepo}}</p>
+                <p><strong>Branch:</strong> {{.GitBranch}}</p>
+                <p><strong>Commit:</strong> {{.GitCommit}}</p>
+                <p><strong>Pusher:</strong> {{.PusherName}}</p>
+                <p><strong>Email:</strong> {{.PusherEmail}}</p>
+                <p><strong>Pipelinerun:</strong> {{.PipelinerunName}}</p>
+                <p><strong>Namespace:</strong> {{.Namespace}}</p>
+                <p><strong>Status:</strong> {{.PipelinerunStatus}}</p>
+                <p><strong>When:</strong> {{.CurrentDate}}</p>
+            </td>
+         </tr>
+    </table>
+  
+</body>
+</html>

@@ -1,0 +1,56 @@
+{
+    "attachments": [
+        {
+            "mrkdwn_in": ["text"],
+            "color": "{{.Color}}",
+            "title": "Tekton Pipelines",
+            "fields": [
+                {
+                    "title": "Repo",
+                    "value": "{{.GitRepo}}",
+                    "short": true
+                },
+                {
+                    "title": "Branch",
+                    "value": "{{.GitBranch}}",
+                    "short": true
+                },     
+                {
+                    "title": "Commit",
+                    "value": "{{.GitCommit}}",
+                    "short": false
+                },                          
+                {
+                    "title": "Pusher",
+                    "value": "{{.PusherName}}",
+                    "short": true
+                },
+                {
+                    "title": "Email",
+                    "value": "{{.PusherEmail}}",
+                    "short": true
+                },   
+                {
+                    "title": "Pipelinerun",
+                    "value": "{{.PipelinerunName}}",
+                    "short": true
+                },   
+                {
+                    "title": "Namespace",
+                    "value": "{{.Namespace}}",
+                    "short": true
+                },                 
+                {
+                    "title": "Status",
+                    "value": "{{.PipelinerunStatus}}",
+                    "short": true
+                },   
+                {
+                    "title": "When",
+                    "value": "{{.CurrentDate}}",
+                    "short": true
+                }
+            ]
+        }
+    ]
+}
